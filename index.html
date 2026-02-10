@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Student Attendance System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1>Online Student Attendance System</h1>
+      <p>Modern Attendance Management | HTML - CSS - JavaScript</p>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="cards">
+      <div class="card">
+        <p>Total Students</p>
+        <h2 id="totalStudents">0</h2>
+      </div>
+      <div class="card">
+        <p>Present Students</p>
+        <h2 id="presentStudents">0</h2>
+      </div>
+      <div class="card">
+        <p>Absent Students</p>
+        <h2 id="absentStudents">0</h2>
+      </div>
+      <div class="card">
+        <p>Attendance %</p>
+        <h2 id="attendancePercent">0.00%</h2>
+      </div>
+    </section>
+
+    <!-- Add Student -->
+    <section class="box">
+      <h3>➕ Add Student</h3>
+      <div class="row">
+        <input type="text" id="rollInput" placeholder="Enter Roll Number" />
+        <input type="text" id="nameInput" placeholder="Enter Student Name" />
+        <button id="addBtn">Add Student</button>
+      </div>
+    </section>
+
+    <!-- Date -->
+    <section class="box">
+      <h3>📅 Select Attendance Date</h3>
+      <div class="row">
+        <input type="date" id="dateInput" />
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section class="box">
+      <h3>🔍 Search Student</h3>
+      <input type="text" id="searchInput" placeholder="Search by Name or Roll No..." />
+    </section>
+
+    <!-- Attendance List -->
+    <section class="box">
+      <h3>📋 Attendance List</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Mark</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody">
+            <!-- Rows added by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
